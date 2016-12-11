@@ -4,8 +4,6 @@
 
 package com.tdudhatra.games.connect4.controller;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.tdudhatra.games.connect4.dto.GameDto;
 import com.tdudhatra.games.connect4.dto.GameMoveDto;
 import com.tdudhatra.games.connect4.dto.GameStatusDto;
@@ -137,9 +135,6 @@ public class GameControllerIntegrationTest extends AbstractBaseTestCase {
         moveToPlay.getxIndex());
     Assert.assertNotNull(gameStatusAfterSecondMove);
     Assert.assertNotNull(gameStatusAfterSecondMove.getGameDto());
-
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    System.out.println(gson.toJson(gameStatusAfterSecondMove));
   }
 
   /**
